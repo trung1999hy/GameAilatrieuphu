@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_start"
+    tools:context=".caidat">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Cài Đặt"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:gravity="center">
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Switch
+            android:id="@+id/sound"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:textColor="#FFFFFF"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Sound"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "925755637394",
+    "project_id": "ai-la-trieu-phu-35cea",
+    "storage_bucket": "ai-la-trieu-phu-35cea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925755637394:android:597375ab84366fda3e704b",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "925755637394-7mnvkfvd96lkupegap8ipl89smsuv7cr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "541b81c72edd45f98162599758426fc5b9c3fe80"
+          }
+        },
+        {
+          "client_id": "925755637394-90re67chm767cmv4j8qh57klc7i0ke5b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIcGzR4Mm2NOsH3MyG7un6vYaLdaksZ8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "925755637394-90re67chm767cmv4j8qh57klc7i0ke5b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
