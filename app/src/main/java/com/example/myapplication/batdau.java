@@ -37,7 +37,7 @@ public class batdau extends AppCompatActivity {
     ArrayAdapter<listds> adapter = null;
     DatabaseHandler databaseHandler;
     ArrayList<listcauhoi> listcauhoiArrayList = new ArrayList<>();
-    ImageView tg5050, khangia, call, stop;
+    ImageView tg5050, khangia, call, stop, changeQuestion;
     Button caua, caub, cauc, caud;
     ImageView imageView;
     //  int[] imgid;
@@ -90,6 +90,7 @@ public class batdau extends AppCompatActivity {
         khangia = (ImageView) findViewById(R.id.helpkhangia);
         call = (ImageView) findViewById(R.id.helpcall);
         stop = (ImageView) findViewById(R.id.dungcuocchoi);
+        changeQuestion = (ImageView) findViewById(R.id.change_question);
 
         ////////////// dap an
         caua = (Button) findViewById(R.id.cauA);
@@ -332,6 +333,25 @@ public class batdau extends AppCompatActivity {
                 }
             });
             sn.create().show();
+        } else if (v.getId() == R.id.change_question) {
+            alertDialog = new AlertDialog.Builder(this).setTitle("Bạn có muốn đổi câu hỏi khác ?").setMessage("Dùng mất 1 vàng bạn có chắc không ?");
+            alertDialog.setPositiveButton("Đồng ý", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    if (MainApp.newInstance().getPreference().getValueCoin() > 0) {
+                        MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() - 1);
+                        changeQuestion();
+                        tvvang.setText(MainApp.newInstance().getPreference().getValueCoin() + "");
+                    } else startActivity(new Intent(batdau.this, PurchaseInAppActivity.class));
+                }
+
+            }).setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                }
+            });
+            alertDialog.create().show();
         }
     }
 
@@ -363,28 +383,28 @@ public class batdau extends AppCompatActivity {
                             caua.setBackgroundResource(R.drawable.dung);
                             amthanh(R.raw.true_a);
                             animnButon(caua);
-                            MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() +50);
+                            MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() + 50);
                             tvvang.setText(MainApp.newInstance().getPreference().getValueCoin() + "");
                             break;
                         case R.id.cauB:
                             caub.setBackgroundResource(R.drawable.dung);
                             amthanh(R.raw.true_b);
                             animnButon(caub);
-                            MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() +50);
+                            MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() + 50);
                             tvvang.setText(MainApp.newInstance().getPreference().getValueCoin() + "");
                             break;
                         case R.id.cauC:
                             cauc.setBackgroundResource(R.drawable.dung);
                             amthanh(R.raw.true_c);
                             animnButon(cauc);
-                            MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() +50);
+                            MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() + 50);
                             tvvang.setText(MainApp.newInstance().getPreference().getValueCoin() + "");
                             break;
                         case R.id.cauD:
                             caud.setBackgroundResource(R.drawable.dung);
                             amthanh(R.raw.true_d);
                             animnButon(caud);
-                            MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() +50);
+                            MainApp.newInstance().getPreference().setValueCoin(MainApp.newInstance().getPreference().getValueCoin() + 50);
                             tvvang.setText(MainApp.newInstance().getPreference().getValueCoin() + "");
                             break;
                     }
@@ -424,6 +444,13 @@ public class batdau extends AppCompatActivity {
                 return;
             }
         }.start();
+    }
+
+    private void changeQuestion() {
+        hienthi(i);
+        changeQuestion.setVisibility(View.GONE);
+        amthanh(SOUND_CAUHOI[i]);
+        limit = true;
     }
 
     public void Call() {

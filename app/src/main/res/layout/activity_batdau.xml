@@ -30,25 +30,35 @@
             <ImageView
                 android:id="@+id/helpkhangia"
                 android:layout_width="50dp"
-                android:layout_marginRight="20dp"
                 android:layout_height="50dp"
+                android:layout_marginRight="20dp"
                 android:onClick="onclicktrogiup"
                 android:src="@drawable/khangia" />
 
             <ImageView
                 android:id="@+id/helpcall"
                 android:layout_width="50dp"
-                android:layout_marginRight="20dp"
                 android:layout_height="50dp"
+                android:layout_marginRight="20dp"
                 android:onClick="onclicktrogiup"
                 android:src="@drawable/call" />
+
+            <ImageView
+                android:id="@+id/change_question"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="onclicktrogiup"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/exchange" />
 
             <ImageView
                 android:id="@+id/dungcuocchoi"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+
                 android:onClick="onclicktrogiup"
                 android:src="@drawable/dungcuocchoi" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -76,8 +86,8 @@
                     android:gravity="center"
                     android:text="03:00"
                     android:textColor="#FFC107"
-                    android:textStyle="bold"
-                    android:textSize="15dp" />
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -166,7 +176,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
 
-            android:id="@+id/cauB"
+                android:id="@+id/cauB"
                 android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button"
