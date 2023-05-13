@@ -45,8 +45,8 @@
 
             <ImageView
                 android:id="@+id/change_question"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:onClick="onclicktrogiup"
                 android:layout_marginEnd="20dp"
                 android:src="@drawable/exchange" />
