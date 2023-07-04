@@ -79,10 +79,12 @@ public class PurchaseInAppAdapter extends RecyclerView.Adapter<PurchaseInAppAdap
 
     private String setTitleValue(String productId, String price) {
         switch (productId) {
-            case Constants.KEY_10_COIN:
+            case Constants.KEY_COIN:
                 return String.format(context.getResources().getString(R.string.message_purchase_one), price + "/5 coin");
+            case Constants.KEY_10_COIN:
+                return String.format(context.getResources().getString(R.string.message_purchase_one), price + "/10coin");
             case Constants.KEY_20_COIN:
-                return String.format(context.getResources().getString(R.string.message_purchase_one), price + "/10 coin");
+                return String.format(context.getResources().getString(R.string.message_purchase_one), price + "/15 coin");
             case Constants.KEY_50_COIN:
                 return String.format(context.getResources().getString(R.string.message_purchase_one), price + "/20 coin");
             case Constants.KEY_100_COIN:

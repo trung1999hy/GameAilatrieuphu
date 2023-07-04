@@ -78,10 +78,12 @@ public class Utils {
 
     public static int getCoinFromKey(String coin) {
         switch (coin) {
-            case Constants.KEY_10_COIN:
+            case Constants.KEY_COIN:
                 return 5;
-            case Constants.KEY_20_COIN:
+            case Constants.KEY_10_COIN:
                 return 10;
+            case Constants.KEY_20_COIN:
+                return 15;
             case Constants.KEY_50_COIN:
                 return 20;
             case Constants.KEY_100_COIN:
@@ -97,10 +99,12 @@ public class Utils {
 
     public static String setTitleValue(Resources resources, String productId, String price) {
         switch (productId) {
+            case Constants.KEY_COIN:
+                return String.format(resources.getString(R.string.message_purchase_one), price + "/5 coin");
             case Constants.KEY_10_COIN:
-                return String.format(resources.getString(R.string.message_purchase_one), price + "/5 vàng");
-            case Constants.KEY_20_COIN:
                 return String.format(resources.getString(R.string.message_purchase_one), price + "/10 vàng");
+            case Constants.KEY_20_COIN:
+                return String.format(resources.getString(R.string.message_purchase_one), price + "/15 vàng");
             case Constants.KEY_50_COIN:
                 return String.format(resources.getString(R.string.message_purchase_one), price + "/20 vàng");
             case Constants.KEY_100_COIN:

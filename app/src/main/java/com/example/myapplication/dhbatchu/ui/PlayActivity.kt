@@ -43,7 +43,7 @@ class PlayActivity : BaseActivity<ActivityPlayBinding>() {
     private var listTextSelect = mutableListOf<String>()
 
     private val dialogResult by lazy { DialogResult() }
-    private val prefsHelper: Preference? = MainApp.newInstance()?.preference
+    private lateinit var prefsHelper: Preference
 
     private var isHelp = false
 
@@ -52,9 +52,9 @@ class PlayActivity : BaseActivity<ActivityPlayBinding>() {
         return ActivityPlayBinding.inflate(layoutInflater)
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     override fun updateUI(savedInstanceState: Bundle?) {
         manager = assets
+        prefsHelper = Preference.buildInstance(this)!!
         audioController = AudioController(this) {}
         dialogResult.setListener {
             prefsHelper?.setCoin(prefsHelper?.getCoin()!! - 1)

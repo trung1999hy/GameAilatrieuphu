@@ -108,7 +108,11 @@ class PurchaseInAppActivity : AppCompatActivity(), PurchaseInAppAdapter.OnClickL
     //Product 5
     //Product 6
     private val inAppProductList: ImmutableList<Product>
-        private get() = ImmutableList.of( //Product 1
+        private get() = ImmutableList.of(
+            Product.newBuilder()
+                .setProductId(Constants.KEY_COIN)
+                .setProductType(ProductType.INAPP)
+                .build(), //Product 1
             Product.newBuilder()
                 .setProductId(Constants.KEY_10_COIN)
                 .setProductType(ProductType.INAPP)

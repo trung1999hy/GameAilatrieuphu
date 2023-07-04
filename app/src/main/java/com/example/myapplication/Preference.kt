@@ -38,7 +38,7 @@ class Preference(context: Context) {
     }
 
     fun getPosActive(): Int {
-        return sharedPreferences.getInt(POS_ACTIVE, Constants.TOTAL_REQUEST)
+        return sharedPreferences.getInt(POS_ACTIVE, Constants.TOTAL_REQUEST-1)
     }
 
     fun setPosActive(value: Int) {

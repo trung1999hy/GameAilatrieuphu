@@ -148,7 +148,11 @@ class StoreFragment: BaseFragment<FragmentStoreBinding>() {
     }
 
     private fun getInAppProductList(): ImmutableList<Product> {
-        return ImmutableList.of<Product>( //Product 1
+        return ImmutableList.of<Product>(
+            Product.newBuilder()
+                .setProductId(Constants.KEY_COIN)
+                .setProductType(ProductType.INAPP)
+                .build(),//Product 1
             Product.newBuilder()
                 .setProductId(Constants.KEY_10_COIN)
                 .setProductType(ProductType.INAPP)

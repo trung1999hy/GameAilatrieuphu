@@ -28,8 +28,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        playSound(R.raw.nenaltp);
         khaibao();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        playSound(R.raw.nenaltp);
     }
 
     public void khaibao() {
@@ -65,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         findViewById(R.id.dh).setOnClickListener(view -> {
+            mediaPlayer.stop();
             startActivity(new Intent(MainActivity.this, com.example.myapplication.dhbatchu.ui.MainActivity.class));
         });
         thoat.setOnClickListener(new View.OnClickListener() {
