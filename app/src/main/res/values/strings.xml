@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Ai là triệu phú</string>
     <string name="message_purchase_one">%s</string>
+    <string name="support">Trợ giúp</string>
+    <string name="coin_input">Nạp Gold</string>
+    <string name="level">Level %d</string>
+    <string name="store">Cửa hàng</string>
+    <string name="message_purchase_tow">%s \n %s</string>
+    <string name="no_data">Không có dữ liệu!</string>
 </resources>

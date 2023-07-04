@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_navigation">#4A313131</color>
+    <color name="material">#fffafafa</color>
+    <color name="title_black_color">#101B20</color>
+    <color name="color_red">#F63224</color>
+
 </resources>

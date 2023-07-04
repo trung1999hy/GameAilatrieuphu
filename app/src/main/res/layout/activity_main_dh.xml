@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hinhnen0"
+    >
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imgCoine"
+        android:layout_width="255dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="light_effect.json"
+        app:lottie_loop="true"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/logo0"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCoine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgCoine"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCoine"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
+
+    <com.example.myapplication.dhbatchu.widget.ImageViewCustom
+        android:id="@+id/imgStart"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:src="@drawable/ic_start"
+        app:layout_constraintBottom_toBottomOf="@+id/lottieCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lottieCenter"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

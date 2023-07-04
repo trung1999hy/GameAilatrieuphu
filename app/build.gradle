@@ -9,13 +9,14 @@ android {
 
     defaultConfig {
         applicationId "com.trungtv.ailatrieuphu"
-        minSdkVersion 16
+        minSdkVersion 24
         targetSdkVersion 32
         versionCode 2
         versionName "2.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -27,8 +28,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    viewBinding {
-        true
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -44,5 +49,27 @@ dependencies {
     def billing_version = "5.0.0"
     implementation "com.android.billingclient:billing:$billing_version"
     implementation 'com.android.support:multidex:1.0.3'
+    implementation project(':core')
+    implementation 'org.koin:koin-android:2.1.6'
+    implementation 'org.koin:koin-android-viewmodel:2.1.6'
+
+    // RX
+    implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.21"
+    implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7:2.2.0'
+
+    // retrofit2
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+
+    implementation platform('com.google.firebase:firebase-bom:31.0.2')
+    implementation 'com.airbnb.android:lottie:3.6.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+    implementation 'com.google.guava:guava:24.1-jre'
 
 }

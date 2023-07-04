@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="customPV">
+        <attr name="from" format="float"/>
+        <attr name="to" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="fonts" format="string" />
+    </declare-styleable>
+
+</resources>

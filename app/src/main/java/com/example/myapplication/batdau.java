@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -556,7 +555,6 @@ public class batdau extends AppCompatActivity {
         dialog.show();
     }
 
-    @SuppressLint("MissingInflatedId")
     public void Thangcuoc(int vang) {
         dialog = new Dialog(this, android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar_MinWidth);
         layoutInflater = LayoutInflater.from(this);

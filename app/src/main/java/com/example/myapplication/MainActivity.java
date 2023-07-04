@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, PurchaseInAppActivity.class));
             }
         });
+        findViewById(R.id.dh).setOnClickListener(view -> {
+            startActivity(new Intent(MainActivity.this, com.example.myapplication.dhbatchu.ui.MainActivity.class));
+        });
         thoat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 });
                 builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which){
+                    public void onClick(DialogInterface dialog, int which) {
 
                     }
                 });

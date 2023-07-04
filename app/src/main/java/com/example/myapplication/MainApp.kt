@@ -9,7 +9,8 @@ class MainApp : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-       getDatabaseHandler()
+        getDatabaseHandler()
+
         preference = Preference.buildInstance(this)
         if (preference?.firstInstall == false) {
             preference?.firstInstall = true
@@ -18,7 +19,8 @@ class MainApp : Application() {
         }
 
     }
-    fun getDatabaseHandler() : DatabaseHandler = DatabaseHandler(this.applicationContext)
+
+    fun getDatabaseHandler(): DatabaseHandler = DatabaseHandler(this.applicationContext)
 
     companion object {
         private var instance: MainApp? = null

@@ -11,6 +11,8 @@ class Preference(context: Context) {
     private val KEY_TOTAL_COIN = "KEY_TOTAL_COIN" // coin
     private val KEY_FIRST_INSTALL = "KEY_FIRST_INSTALL" // coin
     private val INT_ZERO = 0 // coin
+    private  val POS_ACTIVE = "POS_ACTIVE"
+    private  val COIN = "COIN"
 
 
     init {
@@ -33,6 +35,22 @@ class Preference(context: Context) {
 
     fun getValueCoin(): Int {
         return sharedPreferences.getInt(KEY_TOTAL_COIN, INT_ZERO)
+    }
+
+    fun getPosActive(): Int {
+        return sharedPreferences.getInt(POS_ACTIVE, Constants.TOTAL_REQUEST)
+    }
+
+    fun setPosActive(value: Int) {
+        sharedPreferences.edit().putInt(POS_ACTIVE, value).apply()
+    }
+
+    fun getCoin(): Int {
+        return sharedPreferences.getInt(COIN, Constants.COIN_DEFAULT)
+    }
+
+    fun setCoin(value: Int) {
+        sharedPreferences.edit().putInt(COIN, value).apply()
     }
 
 
