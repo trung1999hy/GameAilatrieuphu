@@ -51,6 +51,7 @@
         android:textColor="@color/title_black_color"
         android:textSize="23sp"
         android:visibility="invisible"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

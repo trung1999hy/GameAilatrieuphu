@@ -95,9 +95,10 @@ class PlayActivity : BaseActivity<ActivityPlayBinding>() {
         prefsHelper?.setPosActive(prefsHelper.getPosActive()+1)
         binding.txtLevel.text = String.format(
             resources.getString(R.string.level),
-            TOTAL_REQUEST - prefsHelper?.getPosActive()!!
+            TOTAL_REQUEST - prefsHelper?.getPosActive()!! -1
         )
         binding.txtGold.text = prefsHelper.getCoin().toString()
+
     }
 
     private fun initData() {
